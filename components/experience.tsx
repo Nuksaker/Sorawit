@@ -1,7 +1,7 @@
 "use client"
 
-import { useLanguage } from "./language-provider"
-import { motion } from "framer-motion"
+import { useLanguage } from "@/components/language-provider"
+import { AnimatePresence, motion } from "framer-motion"
 import { BriefcaseIcon, CalendarIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import { useState } from "react"
 
@@ -98,33 +98,43 @@ export function Experience() {
                       <span className="text-sm font-medium">
                         {expandedExperience === exp.id ? t("experience.readLess") : t("experience.readMore")}
                       </span>
-                      {expandedExperience === exp.id ? (
-                        <ChevronUpIcon className="h-5 w-5" />
-                      ) : (
+                      <motion.div
+                        animate={{ rotate: expandedExperience === exp.id ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
                         <ChevronDownIcon className="h-5 w-5" />
-                      )}
+                      </motion.div>
                     </div>
                   </div>
                 </div>
 
-                {expandedExperience === exp.id && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-700"
-                  >
-                    <ul className="space-y-2 mt-2">
-                      {exp.responsibilities.map((responsibility, i) => (
-                        <li key={i} className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
-                          <span className="text-blue-500 mt-1">•</span>
-                          <span>{responsibility}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
+                <AnimatePresence>
+                  {expandedExperience === exp.id && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        opacity: { duration: 0.2 },
+                        height: {
+                          duration: 0.3,
+                          ease: "easeInOut"
+                        }
+                      }}
+                      className="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-700"
+                    >
+                      <ul className="space-y-2 mt-2">
+                        {exp.responsibilities.map((responsibility, i) => (
+                          <li key={i} className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
+                            <span className="text-blue-500 mt-1">•</span>
+                            <span>{responsibility}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
           ))}

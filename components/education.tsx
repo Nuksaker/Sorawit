@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "./language-provider"
+import { useLanguage } from "@/components/language-provider"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCapIcon, CalendarIcon, BookOpenIcon } from "lucide-react"

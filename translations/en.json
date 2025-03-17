@@ -1,76 +1,120 @@
 {
-  "nav.home": "Home",
-  "nav.experience": "Experience",
-  "nav.skills": "Skills",
-  "nav.education": "Education",
-  "nav.contact": "Contact",
-
-  "theme.light": "Light",
-  "theme.dark": "Dark",
-  "theme.system": "System",
-
-  "hero.greeting": "Hello, I'm",
-  "hero.name": "Sorawit Siamhong",
-  "hero.title": "Full Stack Developer",
-  "hero.description": "Passionate about building robust web applications and solving complex problems with clean, efficient code.",
-  "hero.download": "Download CV",
-  "hero.contact": "Contact Me",
-
-  "sections.experience": "Work Experience",
-  "sections.skills": "Skills",
-  "sections.education": "Education",
-  "sections.additionalSkills": "Additional Skills",
-  "sections.contact": "Contact Me",
-
-  "experience.readMore": "Read more",
-  "experience.readLess": "Read less",
-
-  "experience.adasoft.title": "Back End",
-  "experience.adasoft.company": "AdaSoft Co., Ltd.",
-  "experience.adasoft.period": "October 2024 to Present",
-  "experience.adasoft.responsibilities.1": "Managed and developed POS-related systems.",
-  "experience.adasoft.responsibilities.2": "Designed and implemented systems such as E-Tax (full tax invoice), inventory reconciliation, stock adjustments, and product transfers to enhance overall POS functionality.",
-  "experience.adasoft.responsibilities.3": "Consulted with team members to troubleshoot and resolve technical issues.",
-  "experience.adasoft.responsibilities.4": "Developed systems and proposed strategies to improve system performance and team efficiency.",
-  "experience.adasoft.responsibilities.5": "Built backend systems integrated with MQ (Message Queue).",
-  "experience.adasoft.responsibilities.6": "Troubleshot and resolved system issues promptly to minimize downtime.",
-  "experience.adasoft.responsibilities.7": "Conducted unit tests and developed test cases to ensure high-quality deliverables.",
-
-  "experience.synerry.title": "FullStack Developer",
-  "experience.synerry.company": "Synerry Corporation (Thailand) Co., Ltd.",
-  "experience.synerry.period": "February 2023 to October 2024 (1 year, 8 months)",
-  "experience.synerry.responsibilities.1": "Design, develop, and maintain websites, applications, and other systems according to client requirements.",
-  "experience.synerry.responsibilities.2": "Write efficient, maintainable code.",
-  "experience.synerry.responsibilities.3": "Conduct thorough testing to identify and resolve issues.",
-  "experience.synerry.responsibilities.4": "Analyze user requirements and design systems to effectively meet their needs.",
-  "experience.synerry.responsibilities.5": "Prepare documentation and training materials to support end users.",
-  "experience.synerry.responsibilities.6": "Research and adopt new technologies to enhance application development.",
-  "experience.synerry.responsibilities.7": "Set up and configure servers from scratch to launch websites, and troubleshoot issues as they arise.",
-  "experience.synerry.responsibilities.8": "Provide technical support and promptly address user-reported issues.",
-
-  "skills.tabs.development": "Development Skills",
-  "skills.tabs.other": "Other Skills",
-
-  "education.degree": "Computer Engineering",
-  "education.university": "Rajamangala University of Technology Isan",
-  "education.year": "Bachelor's Degree (2023)",
-  "education.coursework.title": "Relevant Coursework",
-  "education.coursework.description": "Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Web Development, Software Engineering.",
-  "education.project.title": "Project",
-  "education.project.description": "Develop EA learning Management System",
-
-  "additionalSkills.problemSolving.title": "Problem-Solving",
-  "additionalSkills.problemSolving.description": "Proficient in analyzing and resolving website issues, including coordinating assistance when needed.",
-  "additionalSkills.teamwork.title": "Teamwork",
-  "additionalSkills.teamwork.description": "Experienced in collaborating effectively with cross-functional teams (PM, Lead, QC/QA, Dev) to achieve project goals.",
-  "additionalSkills.adaptability.title": "Adaptability and Quick Learning",
-  "additionalSkills.adaptability.description": "Able to quickly learn and adapt to new technologies and apply them in development.",
-  "additionalSkills.innovation.title": "Continuous Improvement & Innovation",
-  "additionalSkills.innovation.description": "Dedicated to refining systems and building websites from the ground up to live deployment. Passionate about leveraging new technologies and AI to optimize workflows, while actively sharing best practices and welcoming feedback.",
-
-  "contact.phone": "Phone",
-
-  "footer.tagline": "Full Stack Developer",
-  "footer.rights": "All rights reserved."
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Sorawit Siamhong",
+    "title": "Full Stack Developer",
+    "description": "Passionate about building robust web applications and solving complex problems with clean, efficient code.",
+    "download": "Download CV",
+    "contact": "Contact Me"
+  },
+  "sections": {
+    "experience": "Work Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "additionalSkills": "Additional Skills",
+    "contact": "Contact Me",
+    "projects": "Projects"
+  },
+  "experience": {
+    "adasoft": {
+      "title": "Back End",
+      "company": "AdaSoft Co., Ltd.",
+      "period": "October 2024 to Present",
+      "responsibilities": {
+        "1": "Managed and developed POS-related systems.",
+        "2": "Designed and implemented systems such as E-Tax (full tax invoice), inventory reconciliation, stock adjustments, and product transfers to enhance overall POS functionality.",
+        "3": "Consulted with team members to troubleshoot and resolve technical issues.",
+        "4": "Developed systems and proposed strategies to improve system performance and team efficiency.",
+        "5": "Built backend systems integrated with MQ (Message Queue).",
+        "6": "Troubleshot and resolved system issues promptly to minimize downtime.",
+        "7": "Conducted unit tests and developed test cases to ensure high-quality deliverables."
+      }
+    },
+    "synerry": {
+      "title": "FullStack Developer",
+      "company": "Synerry Corporation (Thailand) Co., Ltd.",
+      "period": "February 2023 to October 2024 (1 year, 8 months)",
+      "responsibilities": {
+        "1": "Design, develop, and maintain websites, applications, and other systems according to client requirements.",
+        "2": "Write efficient, maintainable code.",
+        "3": "Conduct thorough testing to identify and resolve issues.",
+        "4": "Analyze user requirements and design systems to effectively meet their needs.",
+        "5": "Prepare documentation and training materials to support end users.",
+        "6": "Research and adopt new technologies to enhance application development.",
+        "7": "Set up and configure servers from scratch to launch websites, and troubleshoot issues as they arise.",
+        "8": "Provide technical support and promptly address user-reported issues."
+      }
+    },
+    "readMore": "Read more",
+    "readLess": "Read less"
+  },
+  "skills": {
+    "tabs": {
+      "development": "Development Skills",
+      "other": "Other Skills"
+    }
+  },
+  "education": {
+    "degree": "Computer Engineering",
+    "university": "Rajamangala University of Technology Isan",
+    "year": "Bachelor's Degree (2023)",
+    "coursework": {
+      "title": "Relevant Coursework",
+      "description": "Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Web Development, Software Engineering."
+    },
+    "project": {
+      "title": "Project",
+      "description": "Develop EA learning Management System"
+    }
+  },
+  "additionalSkills": {
+    "problemSolving": {
+      "title": "Problem-Solving",
+      "description": "Proficient in analyzing and resolving website issues, including coordinating assistance when needed."
+    },
+    "teamwork": {
+      "title": "Teamwork",
+      "description": "Experienced in collaborating effectively with cross-functional teams (PM, Lead, QC/QA, Dev) to achieve project goals."
+    },
+    "adaptability": {
+      "title": "Adaptability and Quick Learning",
+      "description": "Able to quickly learn and adapt to new technologies and apply them in development."
+    },
+    "innovation": {
+      "title": "Continuous Improvement & Innovation",
+      "description": "Dedicated to refining systems and building websites from the ground up to live deployment. Passionate about leveraging new technologies and AI to optimize workflows, while actively sharing best practices and welcoming feedback."
+    }
+  },
+  "contact": {
+    "phone": "Phone"
+  },
+  "footer": {
+    "tagline": "Full Stack Developer",
+    "rights": "All rights reserved."
+  },
+  "projects": {
+    "technologies": "Technologies Used",
+    "description": "Description",
+    "role": "My Role",
+    "visitSite": "Visit Website",
+    "viewCode": "View Code",
+    "viewDetails": "View Details"
+  },
+  "etc": {
+    "close": "Close",
+    "backToTop": "back To Top"
+  }
 }
-

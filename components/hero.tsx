@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "./language-provider"
+import { useLanguage } from "@/components/language-provider"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Download, Github, Linkedin, Mail } from "lucide-react"
@@ -29,9 +29,15 @@ export function Hero() {
           <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">{t("hero.description")}</p>
           <div className="flex flex-wrap gap-4">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Download className="mr-2 h-4 w-4" />
-              {t("hero.download")}
+              <a
+                href="/files/CV_Mr_Sorawit_Siamhong.pdf"
+                download
+                className="flex items-center">
+                <Download className="mr-2 h-4 w-4" />
+                {t("hero.download")}
+              </a>
             </Button>
+
             <Button variant="outline" asChild>
               <a href="mailto:nukker.srw@gmail.com">
                 <Mail className="mr-2 h-4 w-4" />
@@ -54,11 +60,12 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="order-1 md:order-2 flex justify-center"
+          className="order-1 md:order-2 flex justify-center bg-cover bg-center"
+          style={{ backgroundImage: 'url(/images/Vector4.png)' }} 
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500 dark:border-blue-400 shadow-xl">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 border-b-4 border-blue-200 dark:border-blue-100 overflow-hidden">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src="images\profiles\IMG_Profile.png?height=320&width=320"
               alt="Sorawit Siamhong"
               fill
               className="object-cover"

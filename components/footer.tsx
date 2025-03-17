@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "./language-provider"
+import { useLanguage } from "@/components/language-provider"
 import { motion } from "framer-motion"
 
 export function Footer() {
