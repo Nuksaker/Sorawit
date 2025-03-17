@@ -7,7 +7,7 @@ export function Loader({ onComplete }: { onComplete: () => void }) {
   const [text, setText] = useState("")
   const [isTextComplete, setIsTextComplete] = useState(false)
   const [isRevealing, setIsRevealing] = useState(false)
-  const fullName = "SORAWIT SAIMHONG"
+  const fullName = "SORAWIT SIAMHONG"
 
   useEffect(() => {
     let currentIndex = 0
