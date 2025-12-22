@@ -12,7 +12,8 @@ import { Loader } from "@/components/loader"
 import { useEffect, useState } from "react"
 import { BackToTop } from "@/components/include/back-to-top"
 import { Projects } from "@/components/project"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import { About } from "@/components/about"
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -34,9 +35,9 @@ export default function Home() {
         <Header />
         <div className="container mx-auto px-4 py-8 md:pl-20">
           <Hero />
+          <Projects />
           <Experience />
           <Skills />
-          <Projects />
           <Education />
           <AdditionalSkills />
           <Contact />

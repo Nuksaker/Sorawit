@@ -13,11 +13,23 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage()
   const { setTheme, theme } = useTheme()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
+      
+      const sections = ["projects", "experience", "skills", "education", "contact"]
+      const current = sections.find(section => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top >= -100 && rect.top <= 400
+        }
+        return false
+      })
+      if (current) setActiveSection(current)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -29,8 +41,10 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80" : "bg-transparent"
-        }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${isScrolled 
+        ? "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 py-2" 
+        : "bg-transparent py-4"
+      }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
@@ -45,36 +59,22 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a
-              href="#experience"
-              className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
-            >
-              {t("nav.experience")}
-            </a>
-            <a
-              href="#skills"
-              className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
-            >
-              {t("nav.skills")}
-            </a>
-            <a
-              href="#projects"
-              className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
-            >
-              {t("nav.projects")}
-            </a>
-            <a
-              href="#education"
-              className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
-            >
-              {t("nav.education")}
-            </a>
-            <a
-              href="#contact"
-              className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
-            >
-              {t("nav.contact")}
-            </a>
+            {["projects", "experience", "skills", "education", "contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className={`text-sm font-bold uppercase tracking-widest transition-all duration-300 relative group ${
+                  activeSection === item 
+                    ? "text-blue-600 dark:text-blue-400" 
+                    : "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                }`}
+              >
+                {t(`nav.${item}`)}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-all duration-300 ${
+                  activeSection === item ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
+              </a>
+            ))}
 
             {/* Language Switcher */}
             <DropdownMenu>
@@ -133,6 +133,13 @@ export function Header() {
             className="md:hidden py-4"
           >
             <nav className="flex flex-col space-y-4">
+              <a
+                href="#about"
+                className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.about")}
+              </a>
               <a
                 href="#experience"
                 className="text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"

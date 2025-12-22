@@ -126,25 +126,32 @@ function AutoScrollingRow({
         }, 500); // รอให้ animation เสร็จสิ้น
     }
 
+    const [isDragging, setIsDragging] = useState(false)
+    const [startX, setStartX] = useState(0)
+    const [startScrollLeft, setStartScrollLeft] = useState(0)
+    const scrollPosRef = useRef(0)
+
     useEffect(() => {
-        if (!scrollRef.current || isHovered) return
+        if (!scrollRef.current || isDragging) return
         let animationId: number
-        let startTime: number
-        const speed = direction === "left" ? 1 : -1 // pixels per millisecond
-        const scroll = (timestamp: number) => {
+        
+        // Sync ref with current scroll position
+        scrollPosRef.current = scrollRef.current.scrollLeft
+
+        const speed = direction === "left" ? 0.4 : -0.4
+        const scroll = () => {
             if (!scrollRef.current) return
-            if (!startTime) startTime = timestamp
-            const currentScroll = scrollRef.current.scrollLeft
             const maxScroll = scrollRef.current.scrollWidth / 2
 
-            // Reset scroll position when we've scrolled through the first set of items
-            if ((direction === "left" && currentScroll >= maxScroll) ||
-                (direction === "right" && currentScroll <= 0)) {
-                scrollRef.current.scrollLeft = direction === "left" ? 0 : maxScroll
-            } else {
-                scrollRef.current.scrollLeft += speed
+            scrollPosRef.current += speed
+
+            if (direction === "left" && scrollPosRef.current >= maxScroll) {
+                scrollPosRef.current = 0
+            } else if (direction === "right" && scrollPosRef.current <= 0) {
+                scrollPosRef.current = maxScroll
             }
 
+            scrollRef.current.scrollLeft = scrollPosRef.current
             animationId = requestAnimationFrame(scroll)
         }
 
@@ -153,59 +160,85 @@ function AutoScrollingRow({
         return () => {
             cancelAnimationFrame(animationId)
         }
-    }, [direction, isHovered])
+    }, [direction, isDragging])
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (!scrollRef.current) return
+        setIsDragging(true)
+        setStartX(e.pageX - scrollRef.current.offsetLeft)
+        setStartScrollLeft(scrollRef.current.scrollLeft)
+    }
+
+    const handleMouseUp = () => {
+        setIsDragging(false)
+        if (scrollRef.current) {
+            scrollPosRef.current = scrollRef.current.scrollLeft
+        }
+    }
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging || !scrollRef.current) return
+        e.preventDefault()
+        const x = e.pageX - scrollRef.current.offsetLeft
+        const walk = (x - startX) * 2 // Scroll speed multiplier
+        const newScrollLeft = startScrollLeft - walk
+        scrollRef.current.scrollLeft = newScrollLeft
+        scrollPosRef.current = newScrollLeft
+    }
 
     return (
         <div className="relative group">
-            {/* ปุ่มเลื่อนไปทางซ้าย */}
-            {/* <button
-                onClick={scrollLeft}
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-slate-700"
-                aria-label="Scroll left"
-            >
-                <ChevronLeft className="w-5 h-5 text-slate-900 dark:text-white" />
-            </button> */}
-
             <div
                 ref={scrollRef}
-                className="overflow-x-hidden"
+                className={`overflow-x-hidden ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
                 onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                onMouseLeave={() => {
+                    setIsHovered(false)
+                    setIsDragging(false)
+                }}
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
             >
-                <div className="flex gap-6 py-2">
+                <div className="flex gap-8 py-6">
                     {displayProjects.map((project, index) => (
-                        <div
+                        <motion.div
                             key={`${project.id}-${index}`}
-                            className="flex-shrink-0 w-72 cursor-pointer group/card"
-                            onClick={() => openProjectModal(project)}
+                            className="flex-shrink-0 w-80 cursor-pointer group/card"
+                            whileHover={{ y: -10 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            onClick={() => !isDragging && openProjectModal(project)}
                         >
-                            <div className="relative h-48 rounded-lg overflow-hidden mb-2 shadow-md transition-transform group-hover/card:shadow-lg group-hover/card:scale-105">
+                            <div className="relative h-52 rounded-2xl overflow-hidden mb-4 shadow-lg border border-slate-200/50 dark:border-slate-700/50 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm transition-all group-hover/card:shadow-2xl group-hover/card:border-blue-500/50">
                                 <Image
                                     src={project.image || "/placeholder.svg"}
                                     alt={project.title}
                                     fill
-                                    className="object-cover transition-transform group-hover/card:scale-110"
+                                    className="object-cover transition-transform duration-700 group-hover/card:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity flex items-end">
-                                    <div className="p-4 text-white">
-                                        <p className="font-medium">{t("projects.viewDetails")}</p>
-                                    </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                                    <p className="text-white font-semibold text-lg transform translate-y-4 group-hover/card:translate-y-0 transition-transform duration-300">
+                                        {t("projects.viewDetails")}
+                                    </p>
+                                    <div className="w-12 h-1 bg-blue-500 rounded-full mt-2 transform scale-x-0 group-hover/card:scale-x-100 transition-transform duration-300 origin-left" />
                                 </div>
                             </div>
-                            <h3 className="font-medium text-slate-900 dark:text-white truncate">{project.title}</h3>
-                        </div>
+                            <div className="px-2">
+                                <h3 className="font-bold text-slate-900 dark:text-white text-lg group-hover/card:text-blue-600 dark:group-hover/card:text-blue-400 transition-colors truncate">
+                                    {project.title}
+                                </h3>
+                                <div className="flex gap-2 mt-2">
+                                    {project.technologies.slice(0, 3).map((tech, idx) => (
+                                        <span key={idx} className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
-
-            {/* ปุ่มเลื่อนไปทางขวา */}
-            {/* <button
-                onClick={scrollRight}
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-slate-700"
-                aria-label="Scroll right"
-            >
-                <ChevronRight className="w-5 h-5 text-slate-900 dark:text-white" />
-            </button> */}
         </div>
     )
 }

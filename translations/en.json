@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About",
     "experience": "Experience",
     "skills": "Skills",
     "education": "Education",
@@ -16,37 +17,48 @@
     "greeting": "Hello, I'm",
     "name": "Sorawit Siamhong",
     "title": "Full Stack Developer",
-    "description": "Passionate about building robust web applications and solving complex problems with clean, efficient code.",
+    "description": "“I have experience in developing web applications, POS systems, and government platforms. My goal was to create a reliable and efficient system. Solve complex problems and improve performance Working together effectively as a team.”",
     "download": "Download CV",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "openToWork": "Open to Work"
   },
   "sections": {
     "experience": "Work Experience",
+    "about": "About Me",
     "skills": "Skills",
     "education": "Education",
     "additionalSkills": "Additional Skills",
     "contact": "Contact Me",
     "projects": "Projects"
   },
+  "about": {
+    "title": "About Me",
+    "description": "Put your introduction text here..."
+  },
   "experience": {
     "adasoft": {
       "title": "Back End",
       "company": "AdaSoft Co., Ltd.",
       "period": "October 2024 to Present",
+      "startDate": "2024-10-01",
+      "endDate": "Present",
       "responsibilities": {
-        "1": "Managed and developed POS-related systems.",
-        "2": "Designed and implemented systems such as E-Tax (full tax invoice), inventory reconciliation, stock adjustments, and product transfers to enhance overall POS functionality.",
-        "3": "Consulted with team members to troubleshoot and resolve technical issues.",
-        "4": "Developed systems and proposed strategies to improve system performance and team efficiency.",
-        "5": "Built backend systems integrated with MQ (Message Queue).",
-        "6": "Troubleshot and resolved system issues promptly to minimize downtime.",
-        "7": "Conducted unit tests and developed test cases to ensure high-quality deliverables."
+        "1": "Manage and develop POS related systems",
+        "2": "Design and develop various systems such as E-Tax (full tax invoice), inventory management, stock adjustment, product management, data interface in the system with outsiders, reporting",
+        "3": "Consult with team members to resolve issues. Inside the team or outside",
+        "4": "Develop the system and make recommendations to improve the efficiency of the system and team",
+        "5": "Create a backend system connected to MQ (Message Queue)",
+        "6": "Fix system issues quickly to reduce downtime",
+        "7": "Doing test cases before deploying to ensure the quality of the work",
+        "8": "Study and find new tools, Tool, AI, to develop yourself and your team."
       }
     },
     "synerry": {
       "title": "FullStack Developer",
       "company": "Synerry Corporation (Thailand) Co., Ltd.",
       "period": "February 2023 to October 2024 (1 year, 8 months)",
+      "startDate": "2023-02-01",
+      "endDate": "2024-10-01",
       "responsibilities": {
         "1": "Design, develop, and maintain websites, applications, and other systems according to client requirements.",
         "2": "Write efficient, maintainable code.",
@@ -59,7 +71,8 @@
       }
     },
     "readMore": "Read more",
-    "readLess": "Read less"
+    "readLess": "Read less",
+    "present": "Present"
   },
   "skills": {
     "tabs": {
@@ -82,20 +95,20 @@
   },
   "additionalSkills": {
     "problemSolving": {
-      "title": "Problem-Solving",
-      "description": "Proficient in analyzing and resolving website issues, including coordinating assistance when needed."
+      "title": "Problem Solving",
+      "description": "Demonstrates strong expertise in analyzing and resolving website-related issues, including effective coordination and seeking assistance when necessary."
     },
     "teamwork": {
       "title": "Teamwork",
-      "description": "Experienced in collaborating effectively with cross-functional teams (PM, Lead, QC/QA, Dev) to achieve project goals."
+      "description": "Experienced in collaborating with cross-functional teams (PMs, Leads, QC/QA, and Developers) to successfully achieve project goals."
     },
     "adaptability": {
-      "title": "Adaptability and Quick Learning",
-      "description": "Able to quickly learn and adapt to new technologies and apply them in development."
+      "title": "Adaptability and Rapid Learning",
+      "description": "Able to quickly learn, adapt to new technologies, and effectively apply them to development tasks."
     },
     "innovation": {
-      "title": "Continuous Improvement & Innovation",
-      "description": "Dedicated to refining systems and building websites from the ground up to live deployment. Passionate about leveraging new technologies and AI to optimize workflows, while actively sharing best practices and welcoming feedback."
+      "title": "Continuous Improvement and Innovation",
+      "description": "Continuously improves website performance and leverages new technologies, including AI, to enhance work efficiency while sharing best practices and actively embracing feedback."
     }
   },
   "contact": {
@@ -115,6 +128,21 @@
   },
   "etc": {
     "close": "Close",
-    "backToTop": "back To Top"
+    "backToTop": "back To Top",
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December",
+    "present": "Present",
+    "Month": "Month",
+    "Year": "Year"
   }
 }
