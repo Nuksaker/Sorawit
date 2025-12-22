@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import { BriefcaseIcon, CalendarIcon, ChevronDownIcon } from "lucide-react"
 import { useState, useMemo, useEffect } from "react"
 import { differenceInMonths, parse } from "date-fns"
-import { log } from "console"
 
 interface ExperienceItem {
   id: string
@@ -75,7 +74,7 @@ export function Experience() {
   const formatDateLabel = (dateStr?: string) => {
     if (!dateStr) return t("experience.present")
     const date = parse(dateStr, "yyyy-MM-dd", new Date())
-    return date.toLocaleDateString(t("language") === "th" ? "th-TH" : "en-US", {
+    return date.toLocaleDateString(language === "th" ? "th-TH" : "en-US", {
       month: "long",
       year: "numeric",
     })
@@ -135,9 +134,11 @@ export function Experience() {
                       <CalendarIcon className="h-4 w-4 mr-1.5 text-blue-500/70" />
                       {formatDateLabel(exp.startDate)} - {formatDateLabel(exp.endDate)}
                     </div>
-                    <div className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-bold rounded-full border border-blue-100 dark:border-blue-900/30">
-                      {formatDuration(exp.startDate, exp.endDate)}
-                    </div>
+                    {isMounted && (
+                      <div className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-bold rounded-full border border-blue-100 dark:border-blue-900/30">
+                        {formatDuration(exp.startDate, exp.endDate)}
+                      </div>
+                    )}
                   </div>
                 </div>
 
