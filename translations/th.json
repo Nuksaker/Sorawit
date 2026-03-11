@@ -14,113 +14,245 @@
     "system": "ตามระบบ"
   },
   "hero": {
-    "greeting": "สวัสดีครับ",
+    "greeting": "สวัสดีครับ ผม",
     "name": "สรวิศ เสียมหงษ์",
-    "title": "นักพัฒนาเว็บแอปพลิเคชัน",
-    "description": "“ฉันมีประสบการณ์ในการพัฒนาเว็บแอปพลิเคชัน ระบบ POS และเว็บไซต์ของภาครัฐ เป้าหมายของฉันคือการสร้างระบบที่เชื่อถือได้และมีประสิทธิภาพ แก้ไขปัญหาที่ซับซ้อนและปรับปรุงประสิทธิภาพ การทำงานร่วมกันเป็นทีมอย่างมีประสิทธิภาพ”",
+    "title": "นักพัฒนาเว็บแบบ Full-Stack",
+    "subtitle": "เชี่ยวชาญด้านการพัฒนาเว็บแอปพลิเคชันสำหรับภาครัฐและระบบ POS",
+    "description": "มีประสบการณ์กว่า 3 ปีในการพัฒนาเว็บแอปพลิเคชันสำหรับหน่วยงานรัฐและองค์กรเอกชน เชี่ยวชาญด้าน Backend Architecture, REST API Design และการ Deploy ระบบตั้งแต่ Infrastructure จนถึง UI",
     "download": "ดาวน์โหลด CV",
+    "downloadEn": "English CV (PDF)",
+    "downloadTh": "Thai CV (PDF)",
     "contact": "ติดต่อผม",
-    "openToWork": "เปิดรับโอกาสการทำงาน"
+    "openToWork": "เปิดรับโอกาสใหม่",
+    "yearsExp": "3+",
+    "yearsExpLabel": "ปีประสบการณ์",
+    "projectsLabel": "โปรเจคที่ส่งมอบ",
+    "projectsCount": "10+",
+    "techStackLabel": "เทคโนโลยี",
+    "techStackCount": "20+",
+    "floatingTags": {
+      "tag1": "Node.js",
+      "tag2": "Vue / Nuxt",
+      "tag3": "Jenkins CI/CD"
+    },
+    "scrollHint": "ดูผลงาน",
+    "location": "กรุงเทพฯ ประเทศไทย"
   },
   "sections": {
     "experience": "ประสบการณ์ทำงาน",
     "about": "เกี่ยวกับฉัน",
-    "skills": "ทักษะ",
+    "skills": "ทักษะทางเทคนิค",
     "education": "การศึกษา",
-    "additionalSkills": "ทักษะเพิ่มเติม",
-    "contact": "ติดต่อผม",
-    "projects": "โปรเจค"
+    "additionalSkills": "ความสามารถหลัก",
+    "contact": "ติดต่อ",
+    "projects": "โปรเจคและ Case Studies",
+    "clientProjects": "โปรเจคลูกค้า"
   },
   "about": {
     "title": "เกี่ยวกับฉัน",
-    "description": "ใส่ข้อความแนะนำตัวของคุณที่นี่..."
+    "sectionLabel": "ภูมิหลัง",
+    "bio1": "ผมเป็น <strong>นักพัฒนา Full-Stack</strong> ที่มีประสบการณ์กว่า 3 ปีในการพัฒนาเว็บแอปพลิเคชันสำหรับหน่วยงานรัฐและองค์กรเอกชนในประเทศไทย",
+    "bio2": "เชี่ยวชาญด้าน <strong>Backend Development</strong>, การออกแบบ REST API และ SQL Server Database Architecture — ส่งมอบระบบครบวงจรตั้งแต่ Server Infrastructure จนถึง UI",
+    "bio3": "มีประสบการณ์ครอบคลุม SDLC ทั้งหมด: รวบรวม Requirements จากลูกค้า, ออกแบบ Architecture, ตั้งค่า CI/CD Pipeline, ทดสอบความปลอดภัยด้วย OWASP ZAP, เชื่อมต่อ Message Queue ด้วย RabbitMQ และจัดทำ Documentation",
+    "bio4": "ปัจจุบันทำงานที่ <strong>บริษัท เอด้าซอฟท์ จำกัด</strong> ดูแลระบบ POS ขนาดใหญ่ และกำลังพัฒนาระบบใหม่ด้วย Next.js และ NestJS",
+    "bio5": "ผมมีความหลงใหลใน <strong>AI-assisted development</strong> เป็นอย่างมาก และมักจะค้นคว้าทดลองใช้ AI Tools ใหม่ๆ อยู่เสมอเพื่อนำมาปรับใช้ในการทำงาน ตั้งแต่ยุคแรกของ ChatGPT-3 จนถึงปัจจุบันผมใช้งานทั้ง Gemini, GitHub Copilot, Tabnine, Kiro รวมถึง Antigravity เพื่อช่วยเพิ่มความเร็วในการเขียนโค้ดและแก้ไขปัญหาให้มีประสิทธิภาพสูงสุด",
+    "highlights": {
+      "backend": { "label": "Backend Architecture", "desc": "REST APIs, MVC, HMVC, ออกแบบ Microservices" },
+      "devops": { "label": "DevOps & CI/CD", "desc": "Jenkins, Docker, IIS, Linux, Windows Server" },
+      "enterprise": { "label": "เว็บแอพพลิเคชั่น", "desc": "เว็บไซต์รัฐ, ระบบ POS" },
+      "database": { "label": "Database Design", "desc": "SQL Server, Stored Procedures, Redis" },
+      "security": { "label": "Security Testing", "desc": "OWASP ZAP, แก้ไข Vulnerability, JMeter" },
+      "integration": { "label": "System Integration", "desc": "RabbitMQ, API Orchestration" }
+    }
   },
   "experience": {
-    "readMore": "อ่านเพิ่มเติม",
-    "readLess": "ย่อเนื้อหา",
-    "present": "ปัจจุบัน",
     "adasoft": {
-      "title": "นักพัฒนา Back End",
-      "company": "บริษัท เอด้าซอฟท์ จำกัด",
+      "title": "Back-End Developer",
+      "company": "Adasoft Co., Ltd.",
       "period": "ตุลาคม 2567 ถึง ปัจจุบัน",
+      "startDate": "2024-10-01",
+      "endDate": "ปัจจุบัน",
       "responsibilities": {
-        "1": "จัดการและพัฒนาระบบที่เกี่ยวข้องกับ POS",
-        "2": "ออกแบบและพัฒนาระบบต่างๆ เช่น E-Tax (ใบกำกับภาษีเต็มรูปแบบ), การจัดการสินค้าคงคลัง, การปรับสต็อก, การจัดการสินค้า, interface ข้อมูลในระบบกับภายนอก, การทำรายงาน",
-        "3": "ให้คำปรึกษากับสมาชิกในทีมเพื่อแก้ไขปัญหาต่างๆ ภายในทีมหรือภายนอก",
-        "4": "พัฒนาระบบและเสนอแนะเพื่อปรับปรุงประสิทธิภาพของระบบและทีม",
-        "5": "สร้างระบบ backend ที่เชื่อมต่อกับ MQ (Message Queue)",
-        "6": "แก้ไขปัญหาระบบอย่างรวดเร็วเพื่อลดเวลาหยุดทำงาน",
-        "7": "การทำ Test Case ทดสอบก่อน Deploy เพื่อให้มั่นใจในคุณภาพของผลงาน",
-        "8": "ศึกษาหาเครื่องมือใหม่ๆ Tool, AI มาพัฒนาตนเองและทีม"
+        "1": "ดูแลและพัฒนาระบบ POS ขนาดใหญ่ (CodeIgniter 3): จัดการสินค้าคงคลัง, สินค้า, รายงาน และระบบ E-Tax แบบเต็มรูปแบบ",
+        "2": "ออกแบบและพัฒนา MQ Monitoring Dashboard (Python + Laravel) เพื่อจัดการ RabbitMQ ผ่าน Web UI — ลดการ Restart Server ด้วยตนเอง",
+        "3": "นำ Jenkins CI/CD มาใช้ตั้งแต่เริ่มต้น แทนที่การ Deploy แบบ Manual ด้วย Pipeline อัตโนมัติผ่าน GitHub Webhooks",
+        "4": "พัฒนา SQL Stored Procedures ที่ซับซ้อนสำหรับการสร้างเลขที่เอกสาร, รายงานทางการเงิน และการประมวลผลข้อมูลจำนวนมาก",
+        "5": "ออกแบบสถาปัตยกรรมระบบ POS รุ่นใหม่ด้วย Next.js + NestJS รวมถึง Module Structure และระบบจัดการสิทธิ์เมนูตาม Role",
+        "6": "ประสานงานกับ PM, SA, Tester และทีม C# API ภายนอก เพื่อแก้ไขปัญหาการเชื่อมต่อผ่าน RabbitMQ",
+        "7": "ค้นหาและแก้ไขบั๊กสำคัญในระบบ Production เพื่อลด Downtime",
+        "8": "ศึกษาและประเมินเครื่องมือใหม่ AI และ Best Practices เพื่อพัฒนาทีมอย่างต่อเนื่อง"
       }
     },
     "synerry": {
-      "title": "นักพัฒนา FullStack",
-      "company": "บริษัท ซินเนอร์รี่ คอร์ปอเรชั่น (ประเทศไทย) จำกัด",
-      "period": "กุมภาพันธ์ 2566 ถึง ตุลาคม 2567 (1 ปี 8 เดือน)",
+      "title": "นักพัฒนา Full-Stack",
+      "company": "บริษัท ซีนเนอรีคอร์ปอเรชั่น (ไทยแลนด์) จำกัด",
+      "period": "กุมภาพันธ์ 2566 ถึง ตุลาคม 2567",
+      "startDate": "2023-02-01",
+      "endDate": "2024-10-01",
       "responsibilities": {
-        "1": "ออกแบบ พัฒนา และดูแลเว็บไซต์ แอปพลิเคชัน และระบบอื่นๆ ตามความต้องการของลูกค้า",
-        "2": "เขียนโค้ดที่มีประสิทธิภาพและบำรุงรักษาได้ง่าย",
-        "3": "ทำการทดสอบอย่างละเอียดเพื่อป้องกันการเกิดปัญหา",
-        "4": "วิเคราะห์ความต้องการของผู้ใช้และออกแบบระบบเพื่อตอบสนองความต้องการอย่างมีประสิทธิภาพ",
-        "5": "จัดทำเอกสารและการอบรมผู้ใช้งานระบบ",
-        "6": "ค้นคว้าและนำเทคโนโลยีใหม่ๆ มาใช้เพื่อเพิ่มประสิทธิภาพการพัฒนาแอปพลิเคชัน",
-        "7": "ติดตั้งและกำหนดค่าเซิร์ฟเวอร์ตั้งแต่เริ่มต้นจนถึงการเปิดตัวเว็บไซต์ และแก้ไขปัญหาที่เกิดขึ้น",
-        "8": "ให้การสนับสนุนทางเทคนิคและแก้ไขปัญหาที่ผู้ใช้รายงาน"
+        "1": "ออกแบบและพัฒนาระบบเว็บครบวงจรให้ภาครัฐ: Frontend ด้วย Nuxt 2/3 + TypeScript, Backend REST API ด้วย CodeIgniter 4 และระบบ Backoffice PHP",
+        "2": "ติดตั้งและตั้งค่า Windows Server Infrastructure ตั้งแต่เริ่มต้น: IIS, SQL Server, Jenkins, SSL, Cloudflare DNS สำหรับ Dev/UAT/Production",
+        "3": "สร้าง Jenkins CI/CD Pipeline พร้อม GitLab Webhooks สำหรับการ Deploy อัตโนมัติตาม Branch",
+        "4": "ย้าย Node.js API Codebase จาก JavaScript เป็น TypeScript และออกแบบโครงสร้างโปรเจคใหม่",
+        "5": "ติดตั้ง Redis Caching Layer พร้อมระบบ Cache Invalidation อัตโนมัติ",
+        "6": "ทดสอบความปลอดภัยด้วย OWASP ZAP และแก้ไข Vulnerability ที่พบ",
+        "7": "เชื่อมต่อ Google Analytics, Matomo และดำเนินการประชุมกับลูกค้า Onsite เพื่อเก็บ Requirements",
+        "8": "จัดทำเอกสารระบบ, คู่มือผู้ใช้, เอกสารการอบรม และคู่มือติดตั้ง Server; ประสานงาน Outsource สำหรับ API Integration"
       }
-    }
+    },
+    "readMore": "อ่านเพิ่มเติม",
+    "readLess": "ย่อเนื้อหา",
+    "present": "ปัจจุบัน",
+    "location": "กรุงเทพฯ ประเทศไทย",
+    "fullTime": "พนักงานประจำ",
+    "current": "ปัจจุบัน",
+    "keyAchievements": "ความรับผิดชอบและความสำเร็จหลัก",
+    "endNote": "🎓 วิศวกรรมคอมพิวเตอร์ มทร.อีสาน — จบ 2566"
   },
   "skills": {
+    "sectionLabel": "ความเชี่ยวชาญ",
     "tabs": {
       "development": "ทักษะการพัฒนา",
-      "other": "ทักษะอื่นๆ"
-    }
+      "other": "ทักษะอื่นๆ",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Database",
+      "devops": "DevOps",
+      "tools": "เครื่องมือ & Testing",
+      "ai": "AI & Productivity"
+    },
+    "levelLabel": "ระดับ"
   },
   "education": {
-    "degree": "วิศวกรรมคอมพิวเตอร์",
+    "degree": "ปริญญาตรี วิศวกรรมคอมพิวเตอร์",
     "university": "มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน",
-    "year": "ปริญญาตรี (2566)",
+    "year": "จบการศึกษา 2566",
     "coursework": {
       "title": "วิชาที่เกี่ยวข้อง",
-      "description": "โครงสร้างข้อมูลและอัลกอริทึม, การเขียนโปรแกรมเชิงวัตถุ, ระบบฐานข้อมูล, การพัฒนาเว็บ, วิศวกรรมซอฟต์แวร์"
+      "description": "โครงสร้างข้อมูลและอัลกอริทึม, การเขียนโปรแกรมเชิงวัตถุ, ระบบฐานข้อมูล, การพัฒนาเว็บ, วิศวกรรมซอฟต์แวร์, เครือข่ายคอมพิวเตอร์"
     },
     "project": {
-      "title": "โครงงาน",
-      "description": "พัฒนาระบบจัดการการเรียนรู้ EA"
+      "title": "โครงงานปริญญา",
+      "description": "พัฒนาระบบจัดการการเรียนรู้ EA — เว็บแอปพลิเคชัน Full-Stack สำหรับจัดการเนื้อหาการศึกษา, การลงทะเบียนนักศึกษา และการติดตามผลการประเมิน"
     }
   },
   "additionalSkills": {
+    "sectionLabel": "Soft Skills",
     "problemSolving": {
-      "title": "การแก้ปัญหา",
-      "description": "มีความเชี่ยวชาญในการวิเคราะห์และแก้ไขปัญหาเว็บไซต์ รวมถึงการประสานงานเพื่อขอความช่วยเหลือเมื่อจำเป็น"
+      "title": "การแก้ปัญหาระบบ",
+      "description": "มีประวัติที่แข็งแกร่งในการวินิจฉัยต้นเหตุของปัญหาใน Production — ตั้งแต่ Database Bottleneck, API Integration Failure จนถึง Server Misconfiguration — และแก้ไขได้ทันเวลา"
     },
     "teamwork": {
-      "title": "การทำงานเป็นทีม",
-      "description": "มีประสบการณ์ในการทำงานร่วมกับทีมสหวิชาชีพ (PM, Lead, QC/QA, Dev) เพื่อบรรลุเป้าหมายของโครงการ"
+      "title": "การทำงานข้ามสายงาน",
+      "description": "มีประสบการณ์ทำงานร่วมกับ PM, นักวิเคราะห์ระบบ, QA/QC, UX Designer และทีม API ภายนอก พร้อมนำการประชุมทางเทคนิคและ Code Review กับ Outsource ได้"
     },
     "adaptability": {
-      "title": "การปรับตัวและการเรียนรู้อย่างรวดเร็ว",
-      "description": "สามารถเรียนรู้และปรับตัวเข้ากับเทคโนโลยีใหม่ๆ และนำมาประยุกต์ใช้ในการพัฒนาได้อย่างรวดเร็ว"
+      "title": "เรียนรู้เทคโนโลยีใหม่ได้เร็ว",
+      "description": "รับ Framework, เครื่องมือ และ Codebase ใหม่ได้รวดเร็ว ย้าย Node.js API จาก JavaScript เป็น TypeScript ใน Production และนำ Jenkins CI/CD มาใช้โดยไม่เคยมี Pipeline มาก่อน"
     },
     "innovation": {
-      "title": "การปรับปรุงและนวัตกรรม",
-      "description": "สร้างและปรับปรุงเว็บไซต์ให้มีประสิทธิภาพ และการใช้เทคโนโลยีใหม่ๆ AI เพื่อเพิ่มประสิทธิภาพการทำงาน พร้อมทั้งแบ่งปันแนวทางปฏิบัติที่ดีที่สุดและเปิดรับข้อเสนอแนะ"
+      "title": "Automation & พัฒนาอย่างต่อเนื่อง",
+      "description": "มองหาโอกาส Automate งาน Repetitive เสมอ สร้าง MQ Monitoring Dashboard, นำ CI/CD Pipeline มาใช้ และนำ AI Tools มาเพิ่มความเร็วทีม"
     }
   },
   "contact": {
-    "phone": "โทรศัพท์"
+    "phone": "โทรศัพท์",
+    "sectionLabel": "ติดต่อ",
+    "title": "ติดต่อ",
+    "description": "ขณะนี้เปิดรับงาน Full-Stack และ Backend Engineering ติดต่อได้เลย — ตอบกลับภายใน 24 ชั่วโมง",
+    "ctaTitle": "เปิดรับโอกาสใหม่ 🚀",
+    "ctaDesc": "กำลังมองหา Full-Stack หรือ Backend Engineer ที่มีประสบการณ์ระบบ Production จริงๆ? คุยได้เลยครับ",
+    "sendEmail": "ส่ง Email",
+    "connect": "เชื่อมต่อ",
+    "callNow": "โทรเลย",
+    "viewCode": "ดูโค้ด"
   },
   "footer": {
-    "tagline": "นักพัฒนาเว็บแอปพลิเคชัน",
+    "tagline": "นักพัฒนา Full-Stack · กรุงเทพฯ ประเทศไทย",
     "rights": "สงวนลิขสิทธิ์"
   },
   "projects": {
-    "technologies": "เทคโนโลยี",
+    "technologies": "Tech Stack",
     "description": "รายละเอียด",
     "role": "บทบาทของฉัน",
     "visitSite": "เยี่ยมชมเว็บไซต์",
     "viewCode": "ดูโค้ด",
-    "viewDetails": "ดูรายละเอียด"
+    "viewDetails": "ดูรายละเอียด",
+    "problem": "ปัญหา",
+    "solution": "วิธีแก้",
+    "impact": "ผลลัพธ์",
+    "caseStudy": "Case Study",
+    "sectionLabel": "ผลงานเด่น",
+    "sectionDesc": "ระบบ Production ที่ผมสร้างและส่งมอบ — แต่ละระบบมีปัญหา วิธีแก้ทางเทคนิค และผลลัพธ์ที่วัดได้",
+    "clientSectionLabel": "โปรเจคลูกค้า",
+    "clientSectionDesc": "หน่วยงานรัฐและองค์กรเอกชนที่เคยร่วมงานด้วย",
+    "fullTechStack": "Tech Stack ทั้งหมด",
+    "pipelineFlow": "Pipeline Flow",
+    "viewLive": "ดูเว็บไซต์",
+    "contributed": "ยังมีส่วนร่วมในเว็บไซต์รัฐ 10+ แห่ง รวมถึง",
+    "andMore": "และอื่นๆ",
+    "clickToExpand": "คลิก Case Study เพื่อดูรายละเอียด",
+    "categories": {
+      "Enterprise": "Enterprise",
+      "DevOps": "DevOps",
+      "Government": "ภาครัฐ",
+      "Architecture": "สถาปัตยกรรม"
+    },
+    "caseStudies": {
+      "pos": {
+        "title": "ระบบ POS ขนาดใหญ่",
+        "subtitle": "Enterprise Retail Platform",
+        "period": "ต.ค. 2567 – ปัจจุบัน",
+        "problem": "ระบบ POS ขนาดใหญ่ที่มีความซับซ้อนเพิ่มขึ้นทั้งด้านการจัดการสต็อก, ระบบ E-Tax และการเชื่อมต่อข้อมูลภายนอก Codebase มีรูปแบบเก่าทำให้ Feature Delivery ช้าและ Integration เปราะบาง",
+        "solution": "ดูแลและขยายระบบด้วย CodeIgniter 3 HMVC Architecture พร้อมพัฒนา SQL Stored Procedures สำหรับรายงานและสร้างเลขที่เอกสาร ควบคู่กับออกแบบสถาปัตยกรรมรุ่นใหม่ด้วย Next.js + NestJS",
+        "impact": {
+          "1": "Stabilize ระบบ Production ที่ให้บริการหลายสาขา",
+          "2": "พัฒนา E-Tax Module ใหม่ทั้งหมดตั้งแต่ต้น",
+          "3": "Blueprint สถาปัตยกรรมใหม่พร้อม Migrate ไป Next.js + NestJS",
+          "4": "ลดปัญหา Integration ด้วย API Contract ที่ชัดเจนกับทีม C# ภายนอก"
+        }
+      },
+      "mqDashboard": {
+        "title": "MQ Monitoring Dashboard",
+        "subtitle": "เครื่องมือ Internal DevOps",
+        "period": "ต.ค. 2567 – ปัจจุบัน",
+        "problem": "ทีมเสียเวลาหลายชั่วโมงต่อสัปดาห์ในการ Restart Message Queue Consumer ด้วยตนเอง และไม่มีระบบ Monitoring ภาพรวม ทุกครั้งที่ระบบล้มต้อง SSH เข้า Server",
+        "solution": "ออกแบบและพัฒนา Web-based MQ Monitoring Dashboard ด้วย Python (Queue Consumer Logic) และ Laravel (Web Interface) แสดงสถานะ Queue แบบ Real-time พร้อม Restart Service จาก Browser",
+        "impact": {
+          "1": "ยกเลิกการ Restart Server ด้วยตนเอง — ใช้ Web UI แทนได้เลย",
+          "2": "ลด Overhead การ Monitor จากชั่วโมงต่อสัปดาห์เหลือไม่กี่นาที",
+          "3": "ทีมเห็นสถานะ RabbitMQ Consumer แบบ Real-time",
+          "4": "ทีมที่ไม่ใช่ Dev สามารถวินิจฉัยและแก้ปัญหา Queue ได้เอง"
+        }
+      },
+      "cicd": {
+        "title": "Jenkins CI/CD Pipeline",
+        "subtitle": "ระบบ Deploy อัตโนมัติ",
+        "period": "ต.ค. 2567 – ปัจจุบัน",
+        "problem": "การ Deploy ทำด้วยตนเองผ่าน SSH ทุกครั้ง เสี่ยงเกิดข้อผิดพลาด ต้องให้ Senior Dev ดูแล และ Rollback ทำได้ลำบาก ทีมไม่มี Pipeline เลยแม้แต่น้อย",
+        "solution": "ตั้งค่า Jenkins CI/CD ตั้งแต่เริ่มต้น สร้าง Multi-stage Pipeline พร้อม GitHub Webhooks ทริกเกอร์อัตโนมัติ รวม Build, Test, Deploy และ Health Check หลัง Deploy",
+        "impact": {
+          "1": "แทนที่การ Deploy Manual ด้วย Pipeline อัตโนมัติทั้งหมด",
+          "2": "ลดเวลา Deploy จาก 30+ นาที เหลือไม่ถึง 5 นาที",
+          "3": "ทีมทุกคน Deploy ได้เองโดยไม่ต้องพึ่ง Senior Dev",
+          "4": "เพิ่มความถี่ Deploy และลดความเสี่ยงจาก Human Error"
+        }
+      },
+      "government": {
+        "title": "ระบบเว็บไซต์ภาครัฐ",
+        "subtitle": "Enterprise Platform หลายหน่วยงาน",
+        "period": "ก.พ. 2566 – ต.ค. 2567",
+        "problem": "หน่วยงานรัฐหลายแห่งต้องการระบบเว็บครบวงจร: เว็บ Public, Admin Backoffice, REST API และ Analytics — Deploy บน Windows Server ให้มีความเสถียร ปลอดภัย และมี Multi-environment",
+        "solution": "ส่งมอบระบบแบบ End-to-end ให้หน่วยงานอย่าง กกต., ขนส่ง, กระทรวงวัฒนธรรม ฯลฯ แต่ละโปรเจครวม Frontend Nuxt 2/3 + TypeScript, Backend CodeIgniter 4, Backoffice PHP, SQL Server, Redis, Windows Server + IIS, CI/CD Pipeline และการทดสอบ OWASP ZAP",
+        "impact": {
+          "1": "ส่งมอบระบบเว็บภาครัฐ 10+ ระบบขึ้น Production",
+          "2": "ตั้งค่า Dev / UAT / Production Environment ครบทุกโปรเจค",
+          "3": "Redis Caching ลด Response Time ของ API ได้อย่างเห็นได้ชัด",
+          "4": "ผ่านการตรวจสอบ Security — OWASP ZAP และแก้ไข Vulnerability",
+          "5": "อบรม Onsite และส่งมอบ Technical Documentation ให้ลูกค้าทุกราย"
+        }
+      }
+    }
   },
   "etc": {
     "close": "ปิด",

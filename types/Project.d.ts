@@ -7,7 +7,8 @@ interface Project {
     technologies: string[];
     link?: string;
     github?: string;
-    [key: string]: any; // สำหรับ properties อื่นๆ ที่อาจมี
+    role?: string;
+    url?: string;
 }
 
 interface ProjectCarouselProps {

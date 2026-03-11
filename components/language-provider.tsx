@@ -11,9 +11,13 @@ const CACHE_KEY_PREFIX = "language_translations_"
 const CACHE_EXPIRY_KEY = "language_translations_expiry"
 const CACHE_DURATION = 24 * 60 * 60 * 1000 // 1 day in milliseconds
 
+export interface TranslationNode {
+  [key: string]: string | TranslationNode
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("en")
-  const [translations, setTranslations] = useState<Record<string, any>>({})
+  const [translations, setTranslations] = useState<Record<string, TranslationNode>>({})
 
   useEffect(() => {
     const loadTranslations = async () => {
@@ -89,10 +93,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
     return key.split('.').reduce((obj, k) => {
       if (obj && typeof obj === 'object' && k in obj) {
-        return obj[k]
+        return obj[k] as unknown as TranslationNode
       }
-      return fallback || key
-    }, translations[language])
+      return (fallback || key) as unknown as TranslationNode
+    }, translations[language]) as unknown as string
   }
 
   return (

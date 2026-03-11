@@ -2,38 +2,24 @@
 
 import { useLanguage } from "@/components/language-provider"
 import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
 import { Target, Users, Zap, Lightbulb } from "lucide-react"
+
+const SKILL_KEYS = ["problemSolving", "teamwork", "adaptability", "innovation"] as const
+const ICONS = [
+  <Target className="h-6 w-6" key="target" />,
+  <Users className="h-6 w-6" key="users" />,
+  <Zap className="h-6 w-6" key="zap" />,
+  <Lightbulb className="h-6 w-6" key="lightbulb" />,
+]
+const GRADIENTS = [
+  "from-blue-500 to-blue-600",
+  "from-indigo-500 to-indigo-600",
+  "from-amber-500 to-orange-500",
+  "from-emerald-500 to-teal-500",
+]
 
 export function AdditionalSkills() {
   const { t } = useLanguage()
-
-  const additionalSkills = [
-    {
-      title: t("additionalSkills.problemSolving.title"),
-      description: t("additionalSkills.problemSolving.description"),
-      icon: <Target className="h-8 w-8 text-blue-600 dark:text-blue-400" />,
-      color: "blue"
-    },
-    {
-      title: t("additionalSkills.teamwork.title"),
-      description: t("additionalSkills.teamwork.description"),
-      icon: <Users className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />,
-      color: "indigo"
-    },
-    {
-      title: t("additionalSkills.adaptability.title"),
-      description: t("additionalSkills.adaptability.description"),
-      icon: <Zap className="h-8 w-8 text-amber-500 dark:text-amber-400" />,
-      color: "amber"
-    },
-    {
-      title: t("additionalSkills.innovation.title"),
-      description: t("additionalSkills.innovation.description"),
-      icon: <Lightbulb className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />,
-      color: "emerald"
-    },
-  ]
 
   return (
     <section className="py-16">
@@ -43,40 +29,41 @@ export function AdditionalSkills() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
-          <span className="inline-block border-b-4 border-blue-500 pb-2">{t("sections.additionalSkills")}</span>
-        </h2>
+        <div className="text-center mb-12">
+          <p className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-[0.2em] mb-2">
+            {t("additionalSkills.sectionLabel")}
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">
+            {t("sections.additionalSkills")}
+          </h2>
+          <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mt-4" />
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {additionalSkills.map((skill, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {SKILL_KEYS.map((key, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={key}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -4 }}
+              className="group bg-white dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300"
             >
-              <Card className="h-full border-none shadow-lg bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm group overflow-hidden relative">
-                <CardContent className="p-8">
-                  {/* Background Decoration */}
-                  <div className={`absolute top-0 right-0 w-24 h-24 bg-${skill.color}-500/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-${skill.color}-500/10 transition-colors duration-500`} />
-                  
-                  <div className="flex flex-col gap-4 relative z-10 text-center sm:text-left items-center sm:items-start">
-                    <div className={`p-4 rounded-2xl bg-${skill.color}-100 dark:bg-${skill.color}-900/30 group-hover:scale-110 transition-transform duration-500`}>
-                      {skill.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {skill.title}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
-                        {skill.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className={`h-1 bg-gradient-to-r ${GRADIENTS[index]}`} />
+              <div className="p-6 flex gap-4">
+                <div className={`p-3 rounded-xl bg-gradient-to-br ${GRADIENTS[index]} text-white shrink-0 group-hover:scale-110 transition-transform duration-300 self-start`}>
+                  {ICONS[index]}
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-2 text-base">
+                    {t(`additionalSkills.${key}.title`)}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    {t(`additionalSkills.${key}.description`)}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -84,4 +71,3 @@ export function AdditionalSkills() {
     </section>
   )
 }
-

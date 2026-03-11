@@ -16,119 +16,247 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Sorawit Siamhong",
-    "title": "Full Stack Developer",
-    "description": "“I have experience in developing web applications, POS systems, and government platforms. My goal was to create a reliable and efficient system. Solve complex problems and improve performance Working together effectively as a team.”",
+    "title": "Full-Stack Developer",
+    "subtitle": "Specializing in Web Application for Government & POS Systems",
+    "description": "3+ years building production-grade web applications for government agencies and enterprise clients. Expert in backend architecture, REST API design, and full-stack delivery from infrastructure to UI.",
     "download": "Download CV",
+    "downloadEn": "English CV (PDF)",
+    "downloadTh": "Thai CV (PDF)",
     "contact": "Contact Me",
-    "openToWork": "Open to Work"
+    "openToWork": "Open to Work",
+    "yearsExp": "3+",
+    "yearsExpLabel": "Years Experience",
+    "projectsLabel": "Projects Delivered",
+    "projectsCount": "10+",
+    "techStackLabel": "Technologies",
+    "techStackCount": "20+",
+    "floatingTags": {
+      "tag1": "Node.js",
+      "tag2": "Vue / Nuxt",
+      "tag3": "Jenkins CI/CD"
+    },
+    "scrollHint": "View My Work",
+    "location": "Bangkok, Thailand"
   },
   "sections": {
     "experience": "Work Experience",
     "about": "About Me",
-    "skills": "Skills",
+    "skills": "Technical Skills",
     "education": "Education",
-    "additionalSkills": "Additional Skills",
-    "contact": "Contact Me",
-    "projects": "Projects"
+    "additionalSkills": "Core Strengths",
+    "contact": "Get In Touch",
+    "projects": "Projects & Case Studies",
+    "clientProjects": "Client Projects"
   },
   "about": {
     "title": "About Me",
-    "description": "Put your introduction text here..."
+    "sectionLabel": "Background",
+    "bio1": "I'm a <strong>Full-Stack Developer</strong> with over 3 years of experience building enterprise web applications for government agencies and private sector clients in Thailand.",
+    "bio2": "I specialize in <strong>backend development</strong>, REST API design, and SQL Server database architecture — delivering complete systems from server infrastructure to production-ready UI.",
+    "bio3": "I've worked across the full SDLC: gathering requirements onsite, designing system architecture, setting up CI/CD pipelines, performing security testing with OWASP ZAP, integrating message queues with RabbitMQ, and writing technical documentation. I'm equally comfortable writing complex SQL stored procedures, configuring Windows Server + IIS, or building responsive frontends with Vue/Nuxt/TypeScript.",
+    "bio4": "Currently at <strong>Adasoft Co., Ltd.</strong>, I help maintain a large-scale POS system and am developing a new system using Next.js and NestJS.",
+    "bio5": "I am highly passionate about <strong>AI-assisted development</strong>, constantly exploring and integrating new AI tools into my workflow. Since the early days of ChatGPT-3, I have actively used and adapted to platforms like Gemini, GitHub Copilot, Tabnine, Kiro, and Antigravity to maximize productivity, accelerate problem-solving, and deliver high-quality code faster.",
+    "highlights": {
+      "backend": { "label": "Backend Architecture", "desc": "REST APIs, MVC, HMVC, microservices design" },
+      "devops": { "label": "DevOps & CI/CD", "desc": "Jenkins, Docker, IIS, Linux, Windows Server" },
+      "enterprise": { "label": "Web Application", "desc": "Government portals, POS" },
+      "database": { "label": "Database Design", "desc": "SQL Server, stored procedures, Redis caching" },
+      "security": { "label": "Security Testing", "desc": "OWASP ZAP, vulnerability remediation, JMeter" },
+      "integration": { "label": "System Integration", "desc": "RabbitMQ, API orchestration, queue monitoring" }
+    }
   },
   "experience": {
     "adasoft": {
-      "title": "Back End",
-      "company": "AdaSoft Co., Ltd.",
-      "period": "October 2024 to Present",
+      "title": "Back-End Developer",
+      "company": "Adasoft Co., Ltd.",
+      "period": "October 2024 – Present",
       "startDate": "2024-10-01",
       "endDate": "Present",
       "responsibilities": {
-        "1": "Manage and develop POS related systems",
-        "2": "Design and develop various systems such as E-Tax (full tax invoice), inventory management, stock adjustment, product management, data interface in the system with outsiders, reporting",
-        "3": "Consult with team members to resolve issues. Inside the team or outside",
-        "4": "Develop the system and make recommendations to improve the efficiency of the system and team",
-        "5": "Create a backend system connected to MQ (Message Queue)",
-        "6": "Fix system issues quickly to reduce downtime",
-        "7": "Doing test cases before deploying to ensure the quality of the work",
-        "8": "Study and find new tools, Tool, AI, to develop yourself and your team."
+        "1": "Maintain and develop a large-scale POS system (CodeIgniter 3): inventory management, product management, reporting, and full E-Tax invoice system",
+        "2": "Designed and built an MQ Monitoring Dashboard (Python + Laravel) to manage RabbitMQ queues via web UI — eliminating repeated manual server restarts",
+        "3": "Introduced Jenkins CI/CD from scratch, replacing manual deployments with automated pipelines triggered by GitHub Webhooks",
+        "4": "Developed complex SQL stored procedures for document number generation, financial reporting, and bulk data processing",
+        "5": "Architected the next-generation POS system using Next.js + NestJS, including scalable module structure and role-based menu permission system",
+        "6": "Coordinated with PMs, system analysts, testers, and external C# API team to resolve integration issues and connect systems via RabbitMQ",
+        "7": "Proactively identified and fixed critical system bugs to minimize production downtime",
+        "8": "Research and evaluate new tools, AI, and best practices to continuously improve team productivity"
       }
     },
     "synerry": {
-      "title": "FullStack Developer",
+      "title": "Full-Stack Developer",
       "company": "Synerry Corporation (Thailand) Co., Ltd.",
-      "period": "February 2023 to October 2024 (1 year, 8 months)",
+      "period": "February 2023 – October 2024",
       "startDate": "2023-02-01",
       "endDate": "2024-10-01",
       "responsibilities": {
-        "1": "Design, develop, and maintain websites, applications, and other systems according to client requirements.",
-        "2": "Write efficient, maintainable code.",
-        "3": "Conduct thorough testing to identify and resolve issues.",
-        "4": "Analyze user requirements and design systems to effectively meet their needs.",
-        "5": "Prepare documentation and training materials to support end users.",
-        "6": "Research and adopt new technologies to enhance application development.",
-        "7": "Set up and configure servers from scratch to launch websites, and troubleshoot issues as they arise.",
-        "8": "Provide technical support and promptly address user-reported issues."
+        "1": "Designed and developed complete web systems for government organizations: Nuxt 2/3 + TypeScript frontend, CodeIgniter 4 REST APIs, and PHP backoffice",
+        "2": "Installed and configured Windows Server infrastructure from scratch: IIS, SQL Server, Jenkins, SSL certificates, Cloudflare DNS for Dev/UAT/Production environments",
+        "3": "Built Jenkins CI/CD pipelines with GitLab Webhooks supporting automated deployment by branch (dev/UAT/prod)",
+        "4": "Migrated Node.js API codebase from JavaScript to TypeScript and redesigned the entire project structure",
+        "5": "Implemented Redis caching layer with automatic cache invalidation strategies",
+        "6": "Performed security testing with OWASP ZAP and remediated discovered vulnerabilities",
+        "7": "Integrated analytics platforms (Google Analytics, Matomo) and conducted onsite client meetings for requirements and demos",
+        "8": "Created system documentation, user manuals, training materials, and server installation guides; coordinated with outsource teams on API integration"
       }
     },
     "readMore": "Read more",
     "readLess": "Read less",
-    "present": "Present"
+    "present": "Present",
+    "location": "Bangkok, Thailand",
+    "fullTime": "Full-time",
+    "current": "Current",
+    "keyAchievements": "Key Responsibilities & Achievements",
+    "endNote": "🎓 Computer Engineering, RMUTI — Graduated 2023"
   },
   "skills": {
+    "sectionLabel": "Expertise",
     "tabs": {
       "development": "Development Skills",
-      "other": "Other Skills"
-    }
+      "other": "Other Skills",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Database",
+      "devops": "DevOps",
+      "tools": "Tools & Testing",
+      "ai": "AI & Productivity"
+    },
+    "levelLabel": "Level"
   },
   "education": {
-    "degree": "Computer Engineering",
+    "degree": "Bachelor's Degree in Computer Engineering",
     "university": "Rajamangala University of Technology Isan",
-    "year": "Bachelor's Degree (2023)",
+    "year": "Graduated 2023",
     "coursework": {
       "title": "Relevant Coursework",
-      "description": "Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Web Development, Software Engineering."
+      "description": "Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Web Development, Software Engineering, Computer Networks."
     },
     "project": {
-      "title": "Project",
-      "description": "Develop EA learning Management System"
+      "title": "Senior Project",
+      "description": "Developed an EA Learning Management System — a full-stack web application for managing educational content, student enrollment, and assessment tracking."
     }
   },
   "additionalSkills": {
+    "sectionLabel": "Soft Skills",
     "problemSolving": {
-      "title": "Problem Solving",
-      "description": "Demonstrates strong expertise in analyzing and resolving website-related issues, including effective coordination and seeking assistance when necessary."
+      "title": "System Problem Solving",
+      "description": "Strong track record of diagnosing root causes in production systems — from database bottlenecks and API integration failures to server misconfigurations — and deploying targeted fixes under pressure."
     },
     "teamwork": {
-      "title": "Teamwork",
-      "description": "Experienced in collaborating with cross-functional teams (PMs, Leads, QC/QA, and Developers) to successfully achieve project goals."
+      "title": "Cross-Functional Teamwork",
+      "description": "Experienced working alongside PMs, system analysts, QA/QC engineers, UX designers, and external API teams. Comfortable leading technical discussions and code reviews with outsource partners."
     },
     "adaptability": {
-      "title": "Adaptability and Rapid Learning",
-      "description": "Able to quickly learn, adapt to new technologies, and effectively apply them to development tasks."
+      "title": "Fast Technology Adoption",
+      "description": "Quickly picks up unfamiliar frameworks, tools, and codebases. Migrated a Node.js API from JavaScript to TypeScript in production; introduced Jenkins CI/CD in a team with no existing pipeline knowledge."
     },
     "innovation": {
-      "title": "Continuous Improvement and Innovation",
-      "description": "Continuously improves website performance and leverages new technologies, including AI, to enhance work efficiency while sharing best practices and actively embracing feedback."
+      "title": "Automation & Continuous Improvement",
+      "description": "Consistently looks for opportunities to automate repetitive work. Built the MQ Monitoring Dashboard, introduced CI/CD pipelines, and applies AI-assisted tooling to boost team velocity."
     }
   },
   "contact": {
-    "phone": "Phone"
+    "phone": "Phone",
+    "sectionLabel": "Contact",
+    "title": "Get In Touch",
+    "description": "I'm currently open to full-stack and backend engineering opportunities. Feel free to reach out — I typically respond within 24 hours.",
+    "ctaTitle": "Open to New Opportunities 🚀",
+    "ctaDesc": "Looking for a full-stack or backend engineer who ships real government organizations? Let's talk.",
+    "sendEmail": "Send Email",
+    "connect": "Connect",
+    "callNow": "Call Now",
+    "viewCode": "View Code"
   },
   "footer": {
-    "tagline": "Full Stack Developer",
+    "tagline": "Full-Stack Developer · Bangkok, Thailand",
     "rights": "All rights reserved."
   },
   "projects": {
-    "technologies": "Technologies Used",
-    "description": "Description",
+    "technologies": "Tech Stack",
+    "description": "Overview",
     "role": "My Role",
     "visitSite": "Visit Website",
     "viewCode": "View Code",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "problem": "Problem",
+    "solution": "Solution",
+    "impact": "Impact",
+    "caseStudy": "Case Study",
+    "sectionLabel": "Featured Work",
+    "sectionDesc": "Production systems I've built and shipped — each with a real problem, a technical solution, and measurable impact.",
+    "clientSectionLabel": "Client Portfolio",
+    "clientSectionDesc": "Government agencies and enterprise clients I've worked with directly.",
+    "fullTechStack": "Full Tech Stack",
+    "pipelineFlow": "Pipeline Flow",
+    "viewLive": "View Live",
+    "contributed": "Also contributed to 10+ government portals including",
+    "andMore": "and more.",
+    "clickToExpand": "Click a case study to expand details",
+    "categories": {
+      "Enterprise": "Enterprise",
+      "DevOps": "DevOps",
+      "Government": "Government",
+      "Architecture": "Architecture"
+    },
+    "caseStudies": {
+      "pos": {
+        "title": "Large-Scale POS System",
+        "subtitle": "Enterprise Retail Platform",
+        "period": "Oct 2024 – Present",
+        "problem": "A large-scale POS system with growing complexity across inventory, product management, tax invoicing (E-Tax), and external data interfaces. The codebase used legacy patterns causing slow feature delivery and fragile integrations.",
+        "solution": "Maintained and extended the system using CodeIgniter 3 HMVC architecture, implementing clean module boundaries. Developed complex SQL stored procedures for document numbering and financial reporting. Simultaneously designed the next-generation architecture in Next.js + NestJS with a scalable module structure and role-based menu permission system.",
+        "impact": {
+          "1": "Stabilized a critical production system serving multiple retail locations",
+          "2": "Delivered full E-Tax (electronic tax invoice) module from scratch",
+          "3": "Architectural blueprint ready for migration to Next.js + NestJS",
+          "4": "Reduced integration issues through clear API contracts with external C# teams"
+        }
+      },
+      "mqDashboard": {
+        "title": "MQ Monitoring Dashboard",
+        "subtitle": "Internal DevOps Tool",
+        "period": "Oct 2024 – Present",
+        "problem": "The team was losing hours every week manually restarting message queue consumers and had no visibility into queue depth or consumer health. Every failure required SSH access to the server and manual intervention.",
+        "solution": "Designed and built a web-based MQ Monitoring Dashboard using Python (queue consumer logic) and Laravel (web interface). The dashboard displays real-time queue status, message counts, and consumer states — allowing any team member to restart services, clear queues, or inspect messages directly from a browser.",
+        "impact": {
+          "1": "Eliminated repeated manual server restarts — self-service via web UI",
+          "2": "Reduced monitoring overhead from hours per week to minutes",
+          "3": "Improved team visibility into RabbitMQ consumer health in real time",
+          "4": "Non-technical team members can now diagnose and recover queue issues independently"
+        }
+      },
+      "cicd": {
+        "title": "Jenkins CI/CD Pipeline Setup",
+        "subtitle": "Automated Deployment Infrastructure",
+        "period": "Oct 2024 – Present",
+        "problem": "Deployments were done manually by developers SSHing into servers, copying files, and restarting services. This was error-prone, undocumented, required senior developer involvement, and made rollbacks difficult.",
+        "solution": "Configured Jenkins CI/CD from scratch, setting up multi-stage pipelines with GitHub Webhooks for automated triggering. Deployments now run automatically on push to the appropriate branch, with configurable build steps, environment variable injection, and post-deploy health checks.",
+        "impact": {
+          "1": "Replaced manual deployments with fully automated pipelines",
+          "2": "Cut deployment time from 30+ minutes (manual) to under 5 minutes",
+          "3": "Enabled the entire team to deploy confidently without senior oversight",
+          "4": "Improved deployment frequency and reduced human error risk"
+        }
+      },
+      "government": {
+        "title": "Government Web Portal Systems",
+        "subtitle": "Multi-Client Enterprise Platforms",
+        "period": "Feb 2023 – Oct 2024",
+        "problem": "Multiple Thai government agencies needed complete web platforms: public-facing portals, admin back-offices, REST APIs, and analytics — deployed on Windows Server infrastructure with high reliability, security compliance, and multi-environment staging requirements.",
+        "solution": "Delivered end-to-end web systems for agencies including ECT, DLT, Ministry of Culture, and others. Each project involved Nuxt 2/3 + TypeScript frontend, CodeIgniter 4 REST API backend, PHP backoffice, SQL Server database, and Redis caching. Installed and configured Windows Server + IIS infrastructure, implemented CI/CD pipelines, and performed OWASP ZAP security testing.",
+        "impact": {
+          "1": "10+ government web systems delivered to production",
+          "2": "Set up complete Dev / UAT / Production environments for each client",
+          "3": "Implemented Redis caching reducing API response times significantly",
+          "4": "Passed security audits — OWASP ZAP testing and vulnerability remediation",
+          "5": "Conducted onsite training and delivered technical documentation for all clients"
+        }
+      }
+    }
   },
   "etc": {
     "close": "Close",
-    "backToTop": "back To Top",
+    "backToTop": "Back to Top",
     "Jan": "January",
     "Feb": "February",
     "Mar": "March",

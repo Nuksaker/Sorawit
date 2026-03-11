@@ -14,8 +14,16 @@ const notoSansThai = Noto_Sans_Thai({
 })
 
 export const metadata: Metadata = {
-  title: "Sorawit Siamhong | Resume",
-  description: "Full Stack Developer Resume - Sorawit Siamhong (Nukker)",
+  title: "Sorawit Siamhong | Full-Stack Developer · Gro · POS · Bangkok",
+  description: "Full-Stack Developer with 3+ years building enterprise web applications, POS systems, and government portals. Specialist in backend architecture, REST APIs, DevOps (Jenkins CI/CD), and SQL Server. Based in Bangkok, Thailand.",
+  keywords: ["Full-Stack Developer", "Backend Developer", "PHP", "Vue", "Nuxt", "TypeScript", "SQL Server", "Jenkins CI/CD", "POS System", "Bangkok", "Thailand"],
+  openGraph: {
+    title: "Sorawit Siamhong | Full-Stack Developer",
+    description: "3+ years building enterprise web applications, POS systems, and government portals.",
+    url: "https://sorawit.vercel.app",
+    siteName: "Sorawit Siamhong Portfolio",
+    type: "website",
+  },
 }
 
 export default function RootLayout({

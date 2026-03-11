@@ -20,7 +20,7 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
 
-      const sections = ["projects", "experience", "skills", "education", "contact"]
+      const sections = ["about", "projects", "experience", "skills", "education", "contact"]
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -41,10 +41,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-500 ${isScrolled
-        ? "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 py-2"
-        : "bg-transparent py-4"
-        }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-500 
+        bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 py-2`}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
@@ -59,7 +57,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            {["projects", "experience", "skills", "education", "contact"].map((item) => (
+            {["about", "projects", "experience", "skills", "education", "contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
